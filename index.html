@@ -1,0 +1,68 @@
+<html>
+  <head>
+    <title>Black-Scholes-Merton Calculator</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/black-scholes.js"></script>
+  </head>
+  <body>
+    <body>
+      <div class="Flex-Title">
+        <h1 class="Flex-heading">
+          Black Scholes Model Calculator - For Option Prices
+        </h1>
+      </div>
+
+      <div class="Flex-input">
+        <label for="spotPrice">Spot Price:</label>
+        <div class="Flex-input-boxes">
+          <input type="number" id="spotPrice" placeholder="Enter spot price" />
+        </div>
+      </div>
+
+      <div class="Flex-input">
+        <label for="strikePrice">Strike Price:</label>
+        <input
+          type="number"
+          id="strikePrice"
+          placeholder="Enter strike price"
+        />
+      </div>
+
+      <div class="Flex-input">
+        <label for="riskFreeRate">Risk-Free Rate (%):</label>
+        <input
+          type="number"
+          id="riskFreeRate"
+          placeholder="Enter risk-free rate"
+        />
+      </div>
+
+      <div class="Flex-input">
+        <label for="historicalVolatility">Historical Volatility (%):</label>
+        <input
+          type="number"
+          id="historicalVolatility"
+          placeholder="Enter historical volatility"
+        />
+      </div>
+
+      <div class="Flex-input">
+        <label for="timeToExpiration">Time to Expiration (days left):</label>
+        <input
+          type="number"
+          id="timeToExpiration"
+          placeholder="Enter time to expiration"
+        />
+      </div>
+
+      <button class="result-button" onclick="calculateOptionPrices()">
+        Calculate
+      </button>
+      <div id="result">
+        <h2>Option Prices:</h2>
+        <p>Call Option Price: <span id="callOptionPrice"></span></p>
+        <p>Put Option Price: <span id="putOptionPrice"></span></p>
+      </div>
+    </body>
+  </body>
+</html>
